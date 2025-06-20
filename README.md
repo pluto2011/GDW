@@ -1,3 +1,1 @@
-# Rehein
-//My Graphic Design Website\\
-- made by PLuto 
+- made by Pluto 
