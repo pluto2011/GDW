@@ -1,0 +1,464 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: #D2AC76;
+  color: #17161B;
+}
+
+/* Section Styling */
+.section {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* P1: Header Section */
+.p1 {
+  background: #F4D9B2;
+}
+
+.top-section {
+  width: 100%;
+  height: 126px;
+  background: #D2AC76;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-section .logo {
+  width: 86px;
+  height: 86px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.logo-section .title {
+  color: black;
+  font-size: 36px;
+  font-weight: 500;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 48px;
+}
+
+.nav-button {
+  padding: 14px 24px;
+  background: #17161B;
+  color: #e6b36d;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background: #333;
+}
+
+.banner {
+  width: 100%;
+  height: 550px;
+  overflow: visible;
+  
+}
+
+.description {
+  width: 750px;
+  position: absolute;
+  right: 20px;
+  top: 370px;
+  text-align: right;
+  color: #D2AC76;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio-section {
+  width: 100%;
+  height: 177px;
+  background: #D2AC76;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-box {
+  width: 313px;
+  height: 76px;
+  background: #17161B;
+  position: relative; 
+  left: 0px; /
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio-text {
+  color: #D2AC76;
+  font-size: 65px;
+  font-weight: 800;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  z-index: 1; 
+  margin-left: 0px; 
+}
+/* P2: Logos Section */
+.p2 {
+  background: #D2AC76;
+  padding: 20px;
+}
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.logos-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.logos-grid img:hover {
+  transform: scale(1.05);
+}
+
+.bottom-bar {
+  width: 100%;
+  height: 51.09px;
+  background: #17161B;
+  margin-top: 20px;
+}
+
+/* P3: Business Cards Section */
+.p3 {
+  background: #D2AC76;
+  padding: 20px;
+}
+
+.business-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.business-cards-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.business-cards-grid img:hover {
+  transform: scale(1.05);
+}
+
+.bc3,
+.bc4 {
+  position: relative;
+  top: -10px;
+}
+
+.bottom-bar2 {
+  width: 100%;
+  height: 51.09px;
+  background: #17161B;
+  margin-top: 20px;
+}
+
+/* P4: Flyers Section */
+.p4 {
+  background: #D2AC76;
+  padding: 20px;
+}
+
+.flyers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.flyers-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.flyers-grid img:hover {
+  transform: scale(1.05);
+}
+
+
+/* P5: Contact Form Section */
+
+/* White Container */
+.white-container {
+  background: white; /* White background */
+  padding: 40px; /* Add padding around the content */
+  border-radius: 12px; /* Optional: Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  margin: 20px auto; /* Center the container and add margin */
+  max-width: 1200px; /* Limit the width of the container */
+}
+
+/* P5: Contact Form Section */
+/* White Container */
+.white-container {
+  background: white; /* White background */
+  padding: 20px; /* Add padding around the content */
+  border-radius: 12px; /* Optional: Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  margin: 20px auto; /* Center the container and add margin */
+  width: calc(100% + 20px); /* 10px wider on each side */
+  height: calc(100% + 20px); /* 10px taller on each side */
+  box-sizing: border-box; /* Ensure padding is included in the width/height */
+  position: relative; /* For positioning child elements */
+}
+
+/* P5: Contact Form Section */
+
+/* styles.css */
+
+/* General Container */
+.container {
+  width: 1440px;
+  height: 616.32px;
+  position: relative;
+}
+
+/* Background Container */
+.background-container {
+  width: 1440px;
+  height: 616.32px;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+/* Lines and Shapes */
+.line {
+  position: absolute;
+  background: black;
+}
+
+.line-1 {
+  width: 854px;
+  height: 6px;
+  left: 303px;
+  top: 105px;
+}
+
+.line-2 {
+  width: 842.89px;
+  height: 94.86px;
+  left: 307.31px;
+  top: 111.32px;
+  background: #BA9B6F;
+}
+
+.line-3 {
+  width: 849.81px;
+  height: 321.61px;
+  left: 300.39px;
+  top: 206.18px;
+  background: #F4D9B2;
+}
+
+.line-4 {
+  width: 853px;
+  height: 7px;
+  left: 300px;
+  top: 302px;
+}
+
+.line-5 {
+  width: 7px;
+  height: 508px;
+  left: 1150px;
+  top: 108px;
+}
+
+.line-6 {
+  width: 849.81px;
+  height: 6.32px;
+  left: 300.39px;
+  top: 527.79px;
+}
+
+.line-7 {
+  width: 6.92px;
+  height: 388.46px;
+  left: 628.45px;
+  top: 209.79px;
+}
+
+.line-8 {
+  width: 849.81px;
+  height: 6.32px;
+  left: 303.35px;
+  top: 370.60px;
+}
+
+.line-9 {
+  width: 850px;
+  height: 6px;
+  left: 303px;
+  top: 371px;
+}
+
+.line-10 {
+  width: 850px;
+  height: 76px;
+  left: 300px;
+  top: 534px;
+  background: #BA9B6F;
+}
+
+.line-11 {
+  width: 849.81px;
+  height: 6.32px;
+  left: 304px;
+  top: 610px;
+}
+
+.line-12 {
+  width: 7px;
+  height: 511px;
+  left: 300px;
+  top: 105px;
+}
+
+/* Submit Button */
+.submit-button {
+  width: 239px;
+  height: 57px;
+  left: 609px;
+  top: 534px;
+  position: absolute;
+  color: black;
+  font-size: 60px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+/* Header */
+.header {
+  width: 1440px;
+  height: 51.09px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: #17161B;
+}
+
+/* Form Container */
+.form-container {
+  width: 780px;
+  height: 376.32px;
+  left: 329px;
+  top: 122.68px;
+  position: absolute;
+}
+
+/* Form Labels */
+.label {
+  color: #17161B;
+  font-size: 60px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.name-label {
+  width: 235.18px;
+  height: 66.85px;
+  left: 0;
+  top: 88.32px;
+  position: absolute;
+}
+
+.email-label {
+  width: 170.95px;
+  height: 54.20px;
+  left: 0;
+  top: 176.32px;
+  position: absolute;
+}
+
+.message-label {
+  width: 287.55px;
+  height: 40.65px;
+  left: 0;
+  top: 288.32px;
+  position: absolute;
+}
+
+/* Form Title */
+.form-title {
+  width: 496.05px;
+  height: 68.66px;
+  left: 196.83px;
+  top: 0;
+  position: absolute;
+  color: #17161B;
+  font-size: 70px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+/* Form Placeholders */
+.placeholder {
+  color: rgba(176.24, 173.33, 173.33, 0.50);
+  font-size: 30px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.name-placeholder {
+  width: 374px;
+  height: 34px;
+  left: 323px;
+  top: 121.32px;
+  position: absolute;
+}
+
+.email-placeholder {
+  width: 398px;
+  height: 43px;
+  left: 323px;
+  top: 197.32px;
+  position: absolute;
+}
+
+.message-placeholder {
+  width: 457px;
+  height: 112px;
+  left: 323px;
+  top: 264.32px;
+  position: absolute;
+}
