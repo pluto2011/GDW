@@ -73,7 +73,6 @@ body {
   width: 100%;
   height: 550px;
   overflow: visible;
-  
 }
 
 .description {
@@ -105,7 +104,7 @@ body {
   height: 76px;
   background: #17161B;
   position: relative; 
-  left: 0px; /
+  left: 0px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -121,6 +120,7 @@ body {
   z-index: 1; 
   margin-left: 0px; 
 }
+
 /* P2: Logos Section */
 .p2 {
   background: #D2AC76;
@@ -208,5 +208,184 @@ body {
 
 .flyers-grid img:hover {
   transform: scale(1.05);
+}
+
+.bottom-bar3 {
+  width: 100%;
+  height: 51.09px;
+  background: #17161B;
+  margin-top: 30px;
+}
+
+/* P5: Pricing Section */
+
+
+.pricing-header {
+  position: absolute;
+  top: 0px; 
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Koulen', cursive;
+  font-weight: 400;
+  font-size: 46px;
+  color: black;
+  z-index: 3;
+  user-select: none;
+}
+
+/* Packages Container - Pricing Charts */
+.packages-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 67px;
+  padding: 140px 20px 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 4;
+  top: 30px; /* 30px down */
+}
+
+.package {
+  transition: transform 0.3s ease; /* Enables smooth scaling */
+}
+
+.package:hover {
+  transform: scale(1.05); /* Scales up on hover */
+}
+
+.package {
+  position: relative;
+  width: 200px;
+  height: 570px;
+  color: black;
+  order: 0;
+  top: 0;
+}
+
+.basic {
+  order: 1;
+  width: 200px;
+}
+
+.standard {
+  order: 2;
+  width: 206px;
+  top: -30px;
+}
+
+.elite {
+  order: 3;
+}
+
+.package .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #EDD2AC;
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.package .title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  font-family: 'Koulen', cursive;
+  font-weight: 400;
+  font-size: 46px;
+  color: black;
+  z-index: 1;
+  user-select: none;
+}
+
+.package .package-description {
+  position: absolute;
+  top: 78px;
+  left: 20px;
+  right: 20px;
+  font-size: 16.5px;
+  line-height: 1.4;
+  z-index: 1;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+  text-align: center;
+  color: black;
+}
+
+.standard .package-description {
+  height: 151px;
+}
+
+.basic .package-description {
+  height: 124px;
+}
+
+.package .features {
+  position: absolute;
+  top: 267px; 
+  left: 24px;
+  font-size: 16.5px;
+  line-height: 1.5;
+  z-index: 1;
+  width: 168px;
+}
+
+.basic .features {
+  height: 160px;
+}
+
+.standard .features {
+  height: 138px;
+}
+
+.elite .features {
+  height: 160px;
+}
+
+.package .features p {
+  margin: 4px 0;
+}
+
+.package .price {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Acme', sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  color: black;
+  z-index: 1;
+  user-select: none;
+}
+
+/* Custom box behind packages */
+.custom-box {
+  position: absolute;
+  top: 30px; /* 100px up */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 914px;
+  height: 750px;
+  background: #DCBD90;
+  z-index: 1;
+}
+
+.box {
+  width: 1166px;
+  height: 100px;
+  background: #D2AC76;
+}
+
+.bottom-bar4 {
+  width: 100%;
+  height: 51.05px;
+  background: #000000;
 }
 
