@@ -10,6 +10,11 @@
     html {
       scroll-behavior: smooth;
     }
+
+    /* Add bottom padding so content doesn't get hidden behind bottom bar */
+    #pricing {
+      padding-bottom: 70px; /* height of bottom bar */
+    }
   </style>
 </head>
 <body>
@@ -24,7 +29,6 @@
       <div class="nav-buttons">
         <a class="nav-button" href="#logos">Logos</a>
         <a class="nav-button" href="#business-cards">Cards</a>
-        <a class="nav-button" href="#contact">Flyers</a>
         <a class="nav-button" href="#pricing">Pricing</a>
       </div>
     </div>
@@ -37,45 +41,78 @@
     </div>
   </div>
 
-  <!-- P2: Logos Section -->
-  <div class="section p2" id="logos">
-    <div class="logos-grid">
-      <img src="assets/logos/L1.png" alt="Logo 1" />
-      <img src="assets/logos/L2.png" alt="Logo 2" />
-      <img src="assets/logos/L3.png" alt="Logo 3" />
-      <img src="assets/logos/L4.png" alt="Logo 4" />
-      <img src="assets/logos/L5.png" alt="Logo 5" />
-      <img src="assets/logos/L6.png" alt="Logo 6" />
-      <img src="assets/logos/L7.png" alt="Logo 7" />
-      <img src="assets/logos/L8.png" alt="Logo 8" />
-      <img src="assets/logos/L9.png" alt="Logo 9" />
+  <!-- Horizontal Scroll Container for P2-P3 -->
+  <div class="horizontal-scroll-wrapper">
+
+    <!-- Left Arrow -->
+    <button class="scroll-arrow left-arrow" aria-label="Scroll Left">&#9664;</button>
+
+    <!-- Scrollable Sections Container -->
+    <div class="horizontal-scroll-container">
+
+      <!-- P2: Logos Section -->
+      <div class="section p2" id="logos">
+        <div class="logos-grid">
+          <img src="assets/logos/L1.png" alt="Logo 1" />
+          <img src="assets/logos/L2.png" alt="Logo 2" />
+          <img src="assets/logos/L3.png" alt="Logo 3" />
+          <img src="assets/logos/L4.png" alt="Logo 4" />
+          <img src="assets/logos/L5.png" alt="Logo 5" />
+          <img src="assets/logos/L6.png" alt="Logo 6" />
+          <img src="assets/logos/L7.png" alt="Logo 7" />
+          <img src="assets/logos/L8.png" alt="Logo 8" />
+          <img src="assets/logos/L9.png" alt="Logo 9" />
+        </div>
+        <div class="bottom-bar"></div>
+      </div>
+
+      <!-- P3: Business Cards Section -->
+      <div class="section p3" id="business-cards">
+        <div class="business-cards-grid">
+          <img src="assets/business-cards/BC1.png" alt="Business Card 1" />
+          <img src="assets/business-cards/BC2.png" alt="Business Card 2" />
+          <img class="bc3" src="assets/business-cards/BC3.png" alt="Business Card 3" />
+          <img class="bc4" src="assets/business-cards/BC4.png" alt="Business Card 4" />
+          <img class="bc5" src="assets/business-cards/BC5.png" alt="Business Card 5" />
+          <img class="bc6" src="assets/business-cards/BC6.png" alt="Business Card 6" />
+        </div>
+        <div class="bottom-bar2"></div>
+      </div>
+
     </div>
-    <div class="bottom-bar"></div>
+
+    <!-- Right Arrow -->
+    <button class="scroll-arrow right-arrow" aria-label="Scroll Right">&#9654;</button>
+
   </div>
 
-  <!-- P3: Business Cards Section -->
-  <div class="section p3" id="business-cards">
-    <div class="business-cards-grid">
-      <img src="assets/business-cards/BC1.png" alt="Business Card 1" />
-      <img src="assets/business-cards/BC2.png" alt="Business Card 2" />
-      <img class="bc3" src="assets/business-cards/BC3.png" alt="Business Card 3" />
-      <img class="bc4" src="assets/business-cards/BC4.png" alt="Business Card 4" />
-    </div>
-    <div class="bottom-bar2"></div>
-  </div>
+  <script>
+    // JavaScript for horizontal scroll arrows
+    const scrollContainer = document.querySelector('.horizontal-scroll-container');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
 
-  <!-- P4: Flyers Section -->
-  <div class="section p4" id="contact">
-    <div class="flyers-grid">
-      <img src="assets/flyers/F1.png" alt="Flyer 1" />
-      <img src="assets/flyers/F2.png" alt="Flyer 2" />
-    </div>
-    <div class="bottom-bar3"></div>
-  </div>
+    const scrollAmount = window.innerWidth; // scroll by 1 viewport width
 
-   <!-- P5: Pricing Section -->
-  
-  <div class="section p5" id="pricing" style="position: relative;">
+    leftArrow.addEventListener('click', () => {
+      scrollContainer.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth'
+      });
+    });
+
+    rightArrow.addEventListener('click', () => {
+      scrollContainer.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
+  <div class="bottom-bar4"></div>
+
+  <!-- P5: Pricing Section -->
+  <div class="section p5" id="pricing">
     <h2 class="pricing-header">Pricing Packages</h2>
 
     <div class="packages-container">
@@ -120,23 +157,38 @@
         <div class="background"></div>
         <div class="title">Basic</div>
         <div class="package-description">
-          A very neat and clean logo, it is an excellent choice for those who want simple and effective branding, while also being on a budget.
+          A clean and simple logo designed to give your brand an identity without breaking the bank.
         </div>
         <div class="features">
-          <p>✓ Two Revisions</p>
+          <p>✓ One Revision</p>
           <p>✓ Logo Transparency</p>
           <p>✓ Three Day Delivery</p>
           <p>✓ One Concept</p>
-          <p>✓ 4k Image Quality</p>
+          <p>✓ 4k Quality</p>
         </div>
         <div class="price">45€</div>
       </div>
     </div>
-
-    <div class="custom-box"></div>
   </div>
 
-  <div class="box"></div>
-
-    <div class="bottom-bar4"></div>
+  <!-- P6: Bottom Bar -->
+  <div class="bottom-bar5">
+    <div class="left-group">
+      <img class="RH3" src="assets/rehein/RH3.png" alt="RH3" />
+      <div class="brand-name">Rehein</div>
+    </div>
+    <div class="contact-text">
+      GET IN TOUCH WITH US ON GMAIL & FIVERR
+        <a href="https://www.fiverr.com/rehein" target="_blank" rel="noopener noreferrer">
+          <img src="assets/rehein/fiverr.png" alt="Fiverr" />
+        </a>
+  <a
+href="https://forms.gle/CBjCFWpNaGXXxdS36" target="_blank" rel="noopener noreferrer">
+    <img src="assets/rehein/gmail.png" alt="Gmail" />
+  </a>
+      </a>
+    </div>
   </div>
+
+</body>
+</html>
