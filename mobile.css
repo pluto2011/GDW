@@ -13,12 +13,12 @@ header {
   color: #D2AC76 !important;
 }
 
-  .portfolio-box {
-    backround: #17161B
-    position: relative:
-    padding-left: 10px;
-    padding-right: 15px;
-  }
+.portfolio-box {
+  background: #17161B;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 15px;
+}
 
 .p1 .portfolio-section {
   display: flex;
