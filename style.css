@@ -63,7 +63,6 @@ body {
   font-weight: 500;
   border-radius: 8px;
   cursor: pointer;
-  text-decoration: none;
 }
 
 .nav-button:hover {
@@ -122,39 +121,10 @@ body {
   margin-left: 0px; 
 }
 
-/* Horizontal Scroll Wrapper & Container for P2-P3 */
-.horizontal-scroll-wrapper {
-  width: 100%;
-  max-width: 1590px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  position: relative;
-  padding: 40px 0;
-  box-sizing: border-box;
-}
-
-.horizontal-scroll-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 20px;
-  scroll-snap-type: x mandatory;
-  flex-grow: 1;
-}
-
-.horizontal-scroll-container::-webkit-scrollbar {
-  display: none;
-}
-
-.section.p2, .section.p3 {
-  scroll-snap-align: start;
-  flex: 0 0 100vw;
-  box-sizing: border-box;
+/* P2: Logos Section */
+.p2 {
+  background: #D2AC76;
   padding: 20px;
-  background: #d2ac76;
-  border-radius: 10px;
-  position: relative;
 }
 
 .logos-grid {
@@ -165,23 +135,91 @@ body {
 
 .logos-grid img {
   width: 100%;
-  object-fit: contain;
-  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.logos-grid img:hover {
+  transform: scale(1.05);
+}
+
+.bottom-bar {
+  width: 100%;
+  height: 51.09px;
+  background: #17161B;
+  margin-top: 20px;
+}
+
+/* P3: Business Cards Section */
+.p3 {
+  background: #D2AC76;
+  padding: 20px;
 }
 
 .business-cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 60px 40px;
+  gap: 40px;
 }
 
 .business-cards-grid img {
   width: 100%;
-  object-fit: contain;
-  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-/* Pricing Section */
+.business-cards-grid img:hover {
+  transform: scale(1.05);
+}
+
+.bc3,
+.bc4 {
+  position: relative;
+  top: -10px;
+}
+
+.bottom-bar2 {
+  width: 100%;
+  height: 51.09px;
+  background: #17161B;
+  margin-top: 20px;
+}
+
+/* P4: Flyers Section */
+.p4 {
+  background: #D2AC76;
+  padding: 20px;
+}
+
+.flyers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.flyers-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.flyers-grid img:hover {
+  transform: scale(1.05);
+}
+
+.bottom-bar3 {
+  width: 100%;
+  height: 51.09px;
+  background: #17161B;
+  margin-top: 30px;
+}
+
+/* P5: Pricing Section */
+
+
 .pricing-header {
   position: absolute;
   top: 0px; 
@@ -195,6 +233,7 @@ body {
   user-select: none;
 }
 
+/* Packages Container - Pricing Charts */
 .packages-container {
   position: relative;
   display: flex;
@@ -205,15 +244,15 @@ body {
   width: 100%;
   box-sizing: border-box;
   z-index: 4;
-  top: 30px;
+  top: 30px; /* 30px down */
 }
 
 .package {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Enables smooth scaling */
 }
 
 .package:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Scales up on hover */
 }
 
 .package {
@@ -222,25 +261,22 @@ body {
   height: 570px;
   color: black;
   order: 0;
-  top: 30px;
+  top: 0;
 }
 
 .basic {
   order: 1;
   width: 200px;
-  top: 30px;
 }
 
 .standard {
   order: 2;
   width: 206px;
-  top: 0px;
+  top: -30px;
 }
 
 .elite {
   order: 3;
-  width: 200px;
-  top: 30px;
 }
 
 .package .background {
@@ -329,161 +365,16 @@ body {
   user-select: none;
 }
 
+/* Custom box behind packages */
 .custom-box {
   position: absolute;
-  top: 30px;
+  top: 30px; /* 100px up */
   left: 50%;
   transform: translateX(-50%);
   width: 914px;
   height: 750px;
-  background: #d2ac76;
+  background: #DCBD90;
   z-index: 1;
-}
-
-/* Bottom bars for sections */
-.bottom-bar, .bottom-bar2, .bottom-bar3 {
-  width: 100%;
-  height: 0px;
-  background: #17161B;
-  margin-top: 20px;
-  border-radius: 4px;
-}
-
-.bottom-bar4 {
-  width: calc(100% - 311px);
-  height: 51.09px;
-  background: #17161B;
-  margin-top: 30px;
-  margin-left: 149px;
-}
-
-
-/* Scroll Arrows */
-.scroll-arrow {
-  background: #17161B;
-  color: #e6b36d;
-  border: none;
-  font-size: 36px;
-  cursor: pointer;
-  width: 50px;
-  height: 100px;
-  border-radius: 10px;
-  margin: 0 10px;
-  user-select: none;
-  transition: background 0.3s ease;
-}
-
-.scroll-arrow:hover {
-  background: #333;
-}
-
-.left-arrow {
-  order: 0;
-}
-
-.right-arrow {
-  order: 2;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .section {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-
-  .top-section {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .logo-section {
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-
-  .nav-buttons {
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-
-  .banner {
-    height: auto;
-    max-height: 300px;
-    object-fit: contain;
-  }
-
-  .portfolio-section {
-    position: relative;
-    height: auto;
-    padding: 20px 0;
-  }
-
-  .portfolio-box {
-    margin: 0 auto;
-    position: relative;
-    left: auto;
-    width: 80%;
-    height: 60px;
-  }
-
-  .portfolio-text {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    font-size: 40px;
-    text-align: center;
-  }
-
-  .logos-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .business-cards-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .packages-container {
-    flex-direction: column;
-    padding: 20px 10px 40px;
-    gap: 30px;
-    width: 100%;
-  }
-
-  .package {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-
-  .package .package-description,
-  .package .features {
-    position: relative;
-    height: auto;
-    left: auto;
-    top: auto;
-    width: 100%;
-    text-align: left;
-  }
-
-  .package .price {
-    font-size: 36px;
-    margin-top: 10px;
-  }
-
-  .custom-box {
-    display: none;
-  }
-
-  .nav-button {
-    font-size: 14px;
-    padding: 10px 16px;
-  }
 }
 
  /*-- P6: Bottom Bar*/
