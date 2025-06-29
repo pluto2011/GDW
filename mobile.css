@@ -4,9 +4,14 @@
 
 /* ===== MOBILE RESPONSIVE FIXES FOR P1, P5, P6 ===== */
 
+
 @media (max-width: 600px) {
 
 /* P1 - Header section */
+
+header {
+  color: #D2AC76 !important;
+}
 
   .portfolio-box {
     backround: #17161B
