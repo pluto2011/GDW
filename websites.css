@@ -360,7 +360,7 @@ body {
     object-fit: cover;
   }
 
-   /* Navigation styles */
+  /* Navigation styles */
   .nav-container {
     display: flex;
     justify-content: center;
@@ -473,8 +473,8 @@ body {
   }
 }
 
+/*footer*/
 
-/* Footer */
 .footer {
     background: #d7d9e5;
     color: #03346E;
