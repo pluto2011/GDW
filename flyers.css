@@ -353,19 +353,31 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 767px) {
   .categories-nav {
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 1rem;
-    overflow-x: auto;  /* allows horizontal scroll if needed */
-    padding: 0 1rem;   /* small horizontal padding */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    justify-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* Make the third item (last button) span both columns and center it */
+  .category-nav-item:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 200px;
   }
 
   .category-nav-item {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    min-width: auto;  /* remove fixed min-width */
-    padding: 1rem 1.5rem;
+    gap: 0.75rem;
+    min-width: auto;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    max-width: 200px;
   }
 
   .category-nav-item i {
@@ -374,6 +386,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .category-nav-item span {
     font-weight: 600;
+    text-align: center;
   }
 }
 
@@ -421,7 +434,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-social a:hover {
-    background: #03346E;
+    background: #106cdf;
     transform: translateY(-2px);
 }
 
