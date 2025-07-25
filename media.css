@@ -28,9 +28,7 @@
     gap: 3rem;
   }
 
-  .work-categories {
-    grid-template-columns: 1fr;
-  }
+  /* work-categories responsive layout is now handled in styles.css */
 }
 
 /* At 768px and down */
