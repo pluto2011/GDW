@@ -370,6 +370,53 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width: 768px) {
+  /* Navigation adjustments */
+  .nav-logo {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav-container {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+    width: 100%;
+    text-align: center;
+    box-shadow: none;
+    transition: none;
+  }
+
+  .nav-menu .nav-item {
+    margin: 0;
+  }
+
+  .nav-menu .nav-link {
+    text-align: center;
+    display: inline-block;
+  }
+
+  /* Hide the large logo/title in gallery header on mobile */
+  .gallery-header h1 {
+    display: none;
+  }
+}
+
+
 /* Footer */
 .footer {
     background: #d7d9e5;
