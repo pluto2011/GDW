@@ -258,77 +258,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
-  /* Hide logo and hamburger menu on mobile */
-  .nav-logo {
-    display: none;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  /* Website portfolio: 1 column grid with proper spacing */
   .gallery-grid {
-    grid-template-columns: 1fr !important;
-    grid-template-rows: repeat(3, auto) !important;
-    grid-auto-flow: row !important;
-    gap: 2rem !important;
-    overflow-x: visible !important;
-    row-gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    row-gap: 20px;
   }
 
   .gallery-item {
-    width: 100% !important;
+    width: 100%;
     height: auto !important;
     min-height: unset !important;
-    min-width: unset !important;
-    max-width: 100% !important;
-   height: 250px !important;
-   max-height: none !important;
-}
-
   }
 
   .gallery-image {
-    height: 250px !important;
+    height: auto !important;
     max-height: none !important;
   }
 
-  .gallery-image img, 
-  .gallery-image svg {
-    height: 100% !important;
+  .gallery-image img {
+    height: auto !important;
     max-height: none !important;
-    object-fit: cover;
-  }
-  /* Style the nav menu as a horizontal flexbox */
-  .nav-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 0;
-    margin: 0;
-    position: static;
-    flex-direction: row;
-    background-color: transparent;
-    width: auto;
-    text-align: center;
-    transition: none;
-    box-shadow: none;
-  }
-
-  /* Reset margins on nav items */
-  .nav-menu .nav-item {
-    margin: 0;
-  }
-
-  /* Center text inside each nav link */
-  .nav-menu .nav-link {
-    text-align: center;
-    display: inline-block;
+    object-fit: contain;
   }
 }
-
 
 /* Other Categories Section */
 
@@ -379,43 +331,43 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-@media (max-width: 767px) {
-  .categories-nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 1.5rem;
-    justify-items: center;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 0 1rem;
-
+@media (max-width: 768px) {
+  /* Navigation adjustments */
+  .nav-logo {
+    display: none;
   }
 
-  /* Make the third item (last button) span both columns and center it */
-  .category-nav-item:nth-child(3) {
-    grid-column: 1 / -1;
-    justify-self: center;
-    max-width: 200px;
+  .hamburger {
+    display: none;
   }
 
-  .category-nav-item {
-    flex-direction: column;
+  .nav-container {
+    justify-content: center;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 0.75rem;
-    min-width: auto;
-    padding: 1.5rem 1rem;
-    width: 100%;
-    max-width: 200px;
-  }
-
-  .category-nav-item i {
-    font-size: 2rem;
-  }
-
-  .category-nav-item span {
-    font-weight: 600;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+    width: auto;
     text-align: center;
+    box-shadow: none;
+    transition: none;
+  }
+
+  .nav-menu .nav-item {
+    margin: 0;
+  }
+
+  .nav-menu .nav-link {
+    text-align: center;
+    display: inline-block;
   }
 }
 
@@ -477,4 +429,3 @@ h1, h2, h3, h4, h5, h6 {
     color: #03346E;
     margin: 0;
 }
-
