@@ -448,3 +448,21 @@ h1, h2, h3, h4, h5, h6 {
     color: #03346E;
     margin: 0;
 }
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Optional spacing between flyers */
+  }
+
+  .gallery-item {
+    width: 100%;
+  }
+
+  .gallery-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
