@@ -267,11 +267,35 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 
-  /* Make the nav container a flexbox centered horizontally */
-  .nav-container {
-    justify-content: center;
+  /* Website portfolio: 1 column grid with proper spacing */
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: repeat(3, auto) !important;
+    grid-auto-flow: row !important;
+    gap: 2rem !important;
+    overflow-x: visible !important;
+    row-gap: 2rem;
   }
 
+  .gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    min-height: unset !important;
+    min-width: unset !important;
+    max-width: 100% !important;
+  }
+
+  .gallery-image {
+    height: 250px !important;
+    max-height: none !important;
+  }
+
+  .gallery-image img, 
+  .gallery-image svg {
+    height: 100% !important;
+    max-height: none !important;
+    object-fit: cover;
+  }
   /* Style the nav menu as a horizontal flexbox */
   .nav-menu {
     display: flex;
@@ -449,20 +473,3 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
-@media (max-width: 768px) {
-  .gallery-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem; /* Optional spacing between flyers */
-  }
-
-  .gallery-item {
-    width: 100%;
-  }
-
-  .gallery-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-}
