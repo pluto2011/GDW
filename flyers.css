@@ -331,6 +331,45 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
+@media (max-width: 767px) {
+  .categories-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    justify-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* Make the third item (last button) span both columns and center it */
+  .category-nav-item:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 200px;
+  }
+
+  .category-nav-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: auto;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .category-nav-item i {
+    font-size: 2rem;
+  }
+
+  .category-nav-item span {
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
 @media (max-width: 768px) {
   /* Navigation adjustments */
   .nav-logo {
