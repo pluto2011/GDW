@@ -283,6 +283,10 @@ h1, h2, h3, h4, h5, h6 {
     min-height: unset !important;
     min-width: unset !important;
     max-width: 100% !important;
+   height: 250px !important;
+   max-height: none !important;
+}
+
   }
 
   .gallery-image {
@@ -383,7 +387,6 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1.5rem;
     justify-items: center;
     max-width: 500px;
-    height: 700px !important;
     margin: 0 auto;
     padding: 0 1rem;
 
